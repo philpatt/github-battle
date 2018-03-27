@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import  util from '../utils/api';
+import  utils from '../utils/api';
 
 
 
@@ -42,7 +42,7 @@ class Popular extends Component{
     }
 
     componentDidMount () {
-        util.fetchPopularRepos(this.state.selectedLanguage)
+        utils.fetchPopularRepos(this.state.selectedLanguage)
         .then(function(repos){
             console.log(repos)
         })

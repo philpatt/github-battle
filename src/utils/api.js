@@ -16,7 +16,7 @@ function getProfile (username){
     });
 }
 function getRepos(username) {
-    return axios.get('https://api.github.com/users/' + username + '/repos&per_page=100')
+    return axios.get('https://api.github.com/users/' + username + '/repos?&per_page=10')
 
 }
 function getStarCount(repos) {
@@ -24,7 +24,6 @@ function getStarCount(repos) {
         return count + repo.stargazers_count;
     },0);
 }
-
 function calculateScore(profile, repos){
     var followers = profile.followers;
     var totalStars = getStarCount(repos);
@@ -54,10 +53,11 @@ function sortPlayers (players){
         return b.score - a.score;
     });
 }
-
 function battle(players) {
-    return axios.all()
+    return axios.all(players.map(getUserData))
+        .then(sortPlayers)
+        .catch(handleError)
 }
 
 
-export default { fetchPopularRepos, battle, getProfile, getRepos, getStarCount, calculateScore, handleError}
+export default { fetchPopularRepos, battle, getProfile, getRepos, getStarCount, calculateScore, handleError, getUserData, sortPlayers}
