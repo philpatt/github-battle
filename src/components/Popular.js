@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import fetchPopularRepos from '../utils/api';
+
+
 
 function SelectedLanguage (props){
     var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
@@ -21,21 +24,30 @@ function SelectedLanguage (props){
 }
 
 
-
 SelectedLanguage.propTypes = {
     selectedLanguage: PropTypes.string.isRequired,
     onSelect: PropTypes.func.isRequired,
 }
 
+
 class Popular extends Component{
+
     constructor (props) {
         super(props);
         this.state = {
-            selectedLanguage: 'All'
+            selectedLanguage: 'All',
+            repos: null,
         };
- 
     this.updateLanguage = this.updateLanguage.bind(this);
     }
+
+    componentDidMount () {
+        fetchPopularRepos(this.state.selectedLanguage)
+        .then(function(repos){
+            console.log(repos)
+        })
+    }
+
     updateLanguage(lang){
         this.setState({
             selectedLanguage: lang
@@ -53,5 +65,6 @@ class Popular extends Component{
         )
     }
 }
+
 
 export default Popular;
