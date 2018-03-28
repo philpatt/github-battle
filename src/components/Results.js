@@ -34,7 +34,6 @@ function Player(props){
     )
 }
 
-
 class Results extends Component {
     constructor(props){
         super(props);
@@ -46,6 +45,7 @@ class Results extends Component {
         }
     }
     componentDidMount(){
+        console.log(this.props)
         var players = queryString.parse(this.props.location.search);
         utils.battle([
             players.playerOneName,
