@@ -17,6 +17,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "heroku-postbuild": " npm install --only=dev && npm install && npm run build"
-
   }
 }

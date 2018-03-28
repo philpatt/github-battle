@@ -26,7 +26,6 @@ class App extends Component {
             <Route render={function () {
               return<p>Page Not Found</p>
             }} />
-            
           </Switch>
         </div>
       </Router>
