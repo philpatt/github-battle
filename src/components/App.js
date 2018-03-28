@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../index.css';
 import Popular from './Popular';
 import Nav from './Nav';
-import Home from './Home.js';
+import Home from './Home';
 import Battle from './Battle';
 import Results from './Results';
 
