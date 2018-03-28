@@ -72,6 +72,7 @@ li {
 .popular-item {
   margin: 20px;
   text-align: center;
+  display: inline-grid;
 }
 
 .popular-rank {
@@ -129,6 +130,7 @@ li {
   font-size: 30px;
   font-weight: 200;
 }
+
 .reset {
   border: none;
   background: transparent;
