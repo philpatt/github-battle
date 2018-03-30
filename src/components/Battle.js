@@ -81,6 +81,7 @@ class Battle extends Component {
         var playerTwoName = this.state.playerTwoName;
         var playerOneImage = this.state.playerOneImage;
         var playerTwoImage = this.state.playerTwoImage;
+        console.log('battle playerOne',playerOneName,'playertwo',playerTwoName);
         return(
             <div>
                 <div className='row'>
@@ -111,7 +112,7 @@ class Battle extends Component {
                 </div>
                 {playerOneImage && playerTwoImage && <Link className='button' 
                 to={{pathname: match.url + '/results', 
-                search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName }}>
+                search: 'playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName }}>
                 Battle
                 </Link>}
             </div>

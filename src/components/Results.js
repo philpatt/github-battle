@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import queryString from 'query-string';
+import qs from 'qs';
 import utils from '../utils/api';
 import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
@@ -45,8 +45,9 @@ class Results extends Component {
         }
     }
     componentDidMount(){
-        console.log(this.props)
-        var players = queryString.parse(this.props.location.search);
+        var players = qs.parse(this.props.location.search);
+        players = qs.stringify(players).split('%3F').join('');
+        players = qs.parse(players);
         utils.battle([
             players.playerOneName,
             players.playerTwoName
