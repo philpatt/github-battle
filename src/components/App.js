@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import '../index.css';
 import Nav from './Nav';
 
-import Home from './Home';
 
 import Battle from './Battle';
 import Results from './Results';
@@ -24,7 +23,7 @@ class App extends Component {
           <Nav />
           <Switch>
             
-            <Route exact path='' component={Home} />
+            <Route exact path='/' component={Battle} />
             <Route exact path='/battle/results' component={Results} />         
             <Route exact path='/popular' component = {Popular} />
           </Switch>
