@@ -5,12 +5,7 @@ function Nav (){
     return (
         <ul className='nav'>
             <li>
-                <NavLink exact activeClassName='active' to='/'>
-                    Home
-                </NavLink>
-            </li>
-            <li>
-                <NavLink activeClassName='active' to='/battle'>
+                <NavLink activeClassName='active' to='/'>
                     Battle
                 </NavLink> 
             </li>

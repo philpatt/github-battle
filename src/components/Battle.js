@@ -81,7 +81,6 @@ class Battle extends Component {
         var playerTwoName = this.state.playerTwoName;
         var playerOneImage = this.state.playerOneImage;
         var playerTwoImage = this.state.playerTwoImage;
-        console.log('battle playerOne',playerOneName,'playertwo',playerTwoName);
         return(
             <div>
                 <div className='row'>

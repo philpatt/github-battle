@@ -34,7 +34,6 @@ function RepoGrid (props){
 
 function SelectedLanguage (props){
     var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
-    console.log('selected language',props);
     return (
         <ul className='languages'>
             {languages.map( (lang) => {
