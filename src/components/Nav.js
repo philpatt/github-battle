@@ -5,7 +5,7 @@ function Nav (){
     return (
         <ul className='nav'>
             <li>
-                <NavLink activeClassName='active' to='/'>
+                <NavLink activeClassName='active' to='/battle'>
                     Battle
                 </NavLink> 
             </li>
