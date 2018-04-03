@@ -6,7 +6,7 @@ import Nav from './Nav';
 import Battle from './Battle';
 import Results from './Results';
 import Popular from './Popular';
-import Home from './Home';
+// import Home from './Home';
 
 
 
